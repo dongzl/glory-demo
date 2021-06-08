@@ -1,0 +1,12 @@
+org_name: glory
+server_name: grpc-demo-server
+
+log : # 日志配置
+  "console-log":
+    log_type: console # 命令行输出日志
+    level: debug # 日志等级
+
+provider:
+  "gloryGrpcService":
+    protocol: grpc
+    port: 8081

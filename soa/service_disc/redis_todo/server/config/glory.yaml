@@ -1,0 +1,24 @@
+org_name: ide
+server_name: grpc-demo
+
+log : # 日志配置
+  "console-log":
+    log_type: console # 命令行输出日志
+    level: debug # 日志等级
+
+#registry:
+#  "registryKey":
+#    config_source: file
+##    address: localhost:6379
+##    service: redis
+#    address: localhost:8848
+#    service: nacos
+
+
+
+provider:
+  "gloryGrpcService":
+    protocol: grpc
+#    registry_key: registryKey
+    service_id: GoOnline-IDE-gloryService
+    port: 8079

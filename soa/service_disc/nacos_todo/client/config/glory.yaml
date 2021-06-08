@@ -1,0 +1,18 @@
+org_name: ide
+server_name: grpc-demo
+log :
+  "console-log":
+    log_type: console
+    level: debug
+
+registry:
+  "registryKey":
+    address: localhost:8848
+    service: nacos
+
+
+consumer:
+  "grpc-helloworld-demo":
+    registry_key: registryKey
+    service_id: nacosDemoServer
+    protocol: grpc

@@ -1,0 +1,22 @@
+log :
+#  "local-file-log":
+#    log_type: file
+#    file_path: ./log/glory_log # 自动生成路径
+#    level: info
+  "console-log":
+    log_type: console
+    level: info
+
+registry:
+  "registryKey":
+    address: localhost:8848
+    service: nacos
+
+
+consumer :
+  "gloryClient":
+    registry_key: registryKey
+    config_source: file
+    service_id: GoOnline-IDE-gloryService
+    server_address: 30.225.20.18:8080
+    protocol: glory

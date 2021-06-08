@@ -1,0 +1,27 @@
+org_name: ide
+server_name: jaeger-client
+log :
+  "console-log":
+    log_type: console
+    level: debug
+
+consumer :
+  "client_server":
+    service_id: GoOnline-IDE-gloryService
+    server_address: 127.0.0.1:8080
+    protocol: grpc
+    filters_key:
+      - grpc_filter
+  "client_subserver":
+    service_id: GoOnline-IDE-glorySubService
+    server_address: 127.0.0.1:8082
+    protocol: grpc
+    filters_key:
+      - grpc_filter
+
+filter:
+  "grpc_filter":
+    filter_name: "jaeger"
+    jaeger_address: 127.0.0.1:6831
+#    aliyun_token_1: XXX
+#    aliyun_token_2: XXX

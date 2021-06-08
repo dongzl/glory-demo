@@ -1,0 +1,6 @@
+*.exe
+./log
+./log/*
+./cache
+./cache/*
+./nacos*

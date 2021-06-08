@@ -1,0 +1,13 @@
+# 如果使用此yaml，请设置环境变量GLORY_ENV=dev
+org_name: glory
+server_name: grpc-demo-client
+log :
+  "console-log":
+    log_type: console
+    level: debug
+
+consumer:
+  "grpc-helloworld-demo":
+    registry_key: registryKey
+    server_address: localhost:8081
+    protocol: grpc

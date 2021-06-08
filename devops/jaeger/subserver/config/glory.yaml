@@ -1,0 +1,30 @@
+org_name: ide
+server_name: jaeger-subserver
+log : # 日志配置
+  "console-log":
+    log_type: console # 命令行输出日志
+    level: debug # 日志等级
+
+provider:
+  "GrpcSubService": # service 名称可自定义
+    protocol: grpc # 通过grpc暴露
+    service_id: GoOnline-IDE-glorySubService # service 唯一ID，用于服务注册
+    port: 8082 # 暴露端口
+    filters_key:
+      - grpc_filter
+consumer :
+  "jaeger-demo-server2":
+    service_id: GoOnline-IDE-glorySubService
+    server_address: 127.0.0.1:8083
+    protocol: grpc
+    filters_key:
+      - grpc_filter
+
+
+filter:
+  "grpc_filter":
+    filter_name: "jaeger"
+    jaeger_address: 127.0.0.1:6831
+#    aliyun_token_1: XXXXXX
+#    aliyun_token_2: XXXXXX
+

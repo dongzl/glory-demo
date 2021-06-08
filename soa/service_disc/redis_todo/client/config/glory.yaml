@@ -1,0 +1,23 @@
+org_name: ide
+server_name: grpc-demo
+log :
+  "console-log":
+    log_type: console
+    level: debug
+
+registry:
+  "registryKey":
+    config_source: file
+#    address: localhost:6379
+#    service: redis
+    address: localhost:8848
+    service: nacos
+
+
+consumer:
+  "grpc-helloworld-demo":
+    registry_key: registryKey
+    config_source: file
+    service_id: GoOnline-IDE-gloryService
+    server_address: localhost:8079
+    protocol: grpc

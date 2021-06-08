@@ -1,0 +1,14 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="go build log" type="GoApplicationRunConfiguration" factoryName="Go Application">
+    <module name="glory-demo" />
+    <working_directory value="$PROJECT_DIR$" />
+    <envs>
+      <env name="GLORY_CONFIG_PATH" value="D:\workplace\opensource\glory-go\glory-demo\devops\log\server\config\glory.yaml" />
+    </envs>
+    <kind value="PACKAGE" />
+    <filePath value="$PROJECT_DIR$/db/redis/server/main.go" />
+    <package value="github.com/glory-go/glory-demo/devops/log/server" />
+    <directory value="$PROJECT_DIR$" />
+    <method v="2" />
+  </configuration>
+</component>

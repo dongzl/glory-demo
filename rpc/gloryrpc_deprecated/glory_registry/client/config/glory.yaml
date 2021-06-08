@@ -1,0 +1,19 @@
+log :
+  "console-log":
+    log_type: console
+    level: debug
+
+registry:
+  "registryKey":
+    config_source: file
+    address: localhost:6379
+    service: redis
+
+consumer :
+  "gloryClient" :
+    "dev" :
+      registry_key: registryKey
+      config_source: file
+      service_id: GoOnline-IDE-gloryService
+  #    server_address: 30.225.19.225:8080
+      protocol: glory

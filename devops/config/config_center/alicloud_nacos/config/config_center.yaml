@@ -1,0 +1,13 @@
+org_name: classroom
+server_name: config_center_test
+name: nacos
+end_point: acm.aliyun.com
+namespace_id: XXX
+access_key_id: XXX
+access_secret: XXX
+
+# you should export GLORY_ENV="online" before using config_center
+# and glory will select target instance
+env_map:
+  "online": XXX
+  "stage": XXX

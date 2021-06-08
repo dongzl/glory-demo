@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: glory-k8s-client-service
+  namespace: glory
+  labels:
+    app: glory-k8s-client-service
+spec:
+  type: NodePort
+  ports:
+    - port: 8701
+      targetPort: 8701
+      protocol: TCP
+      name: http
+  selector:
+    app: demo-pod
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: glory-k8s-client-deployment
+  namespace: glory
+spec:
+  selector:
+    matchLabels:
+      app: demo-pod
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: demo-pod
+    spec:
+      containers:
+        - name: glory-k8s-client-name
+          image: glory-k8s-client-image  #本地私有镜像库的镜像名称+版本
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8701

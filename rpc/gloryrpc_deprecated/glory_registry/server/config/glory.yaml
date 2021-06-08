@@ -1,0 +1,31 @@
+log :
+#  "local-file-log":
+#    log_type: file
+#    file_path: ./log/glory_log # 自动生成路径
+#    level: info
+  "console-log":
+    log_type: console
+    level: debug
+
+registry:
+  "registryKey":
+    config_source: file
+    address: localhost:6379
+    service: redis
+
+#metrics:
+#  - client_port: 8082
+#    metrics_type: prometheus_client
+#    client_path: /prometheus
+#    action_type: pull
+#  - gateway_host: localhost
+#    gateway_port: 9091
+#    action_type: push
+#    metrics_type: prometheus_client
+
+provider:
+  "gloryService":
+    protocol: glory
+    registry_key: registryKey
+    service_id: GoOnline-IDE-gloryService
+    port: 8080

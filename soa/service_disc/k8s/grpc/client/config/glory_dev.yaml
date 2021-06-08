@@ -1,0 +1,21 @@
+# 如果使用此yaml，请设置环境变量GLORY_ENV=dev
+org_name: ide
+server_name: grpc-demo
+log :
+  "console-log":
+    log_type: console
+    level: debug
+
+registry:
+  "registryKey":
+    config_source: file
+    address: localhost:6379
+    service: redis
+
+consumer:
+  "grpc-helloworld-demo":
+    registry_key: registryKey
+    config_source: file
+    service_id: GoOnline-IDE-gloryService-DEV # this is the different, I add -DEV to test
+    #    server_address: 30.225.19.225:8080
+    protocol: grpc

@@ -1,0 +1,38 @@
+org_name: ide
+server_name: jaeger-server
+log : # 日志配置
+  "console-log":
+    log_type: console # 命令行输出日志
+    level: debug # 日志等级
+  "remote-sls-log":
+    config_source: file
+    log_type: sls # 阿里云 sls 日志收集
+    level: debug
+    project_name: go-online-devops
+    access_key_id: LTAI4GKJzEFxykNtb8t5RMog
+    access_secret: Dn0s1Jsoyz10fzRMJuhHsmQZO8vIA0
+    endpoint: cn-shanghai.log.aliyuncs.com
+    log_store_name: go-online-log
+    interval: 5 # 日志上报刷新时间
+
+provider:
+  "GrpcService": # service 名称可自定义
+    protocol: grpc # 通过grpc暴露
+    service_id: GoOnline-IDE-gloryService # service 唯一ID，用于服务注册
+    port: 8080 # 暴露端口
+    filters_key:
+      - grpc_filter
+consumer :
+  "jaeger-demo-server1":
+    service_id: GoOnline-IDE-glorySubService
+    server_address: 127.0.0.1:8082
+    protocol: grpc
+    filters_key:
+      - grpc_filter
+
+filter:
+  "grpc_filter":
+    filter_name: "jaeger"
+    jaeger_address: 127.0.0.1:6831
+#    aliyun_token_1: XXXXXX
+#    aliyun_token_2: XXXXXX
