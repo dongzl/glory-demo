@@ -9,9 +9,9 @@ log : # 日志配置
     log_type: sls # 阿里云 sls 日志收集
     level: debug
     project_name: go-online-devops
-    access_key_id: LTAI4GKJzEFxykNtb8t5RMog
-    access_secret: Dn0s1Jsoyz10fzRMJuhHsmQZO8vIA0
-    endpoint: cn-shanghai.log.aliyuncs.com
+    access_key_id: XXX
+    access_secret: XXX
+    endpoint: XXX
     log_store_name: go-online-log
     interval: 5 # 日志上报刷新时间
 
