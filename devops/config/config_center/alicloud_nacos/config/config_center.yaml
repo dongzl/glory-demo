@@ -1,4 +1,4 @@
-org_name: classroom
+org_name: glory
 server_name: config_center_test
 name: nacos
 end_point: acm.aliyun.com

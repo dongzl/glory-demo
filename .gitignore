@@ -1,6 +1,8 @@
 *.exe
-./log
-./log/*
-./cache
-./cache/*
-./nacos*
+/log
+/log/*
+/cache
+/cache/*
+/nacos*
+/naming/*
+/naming/

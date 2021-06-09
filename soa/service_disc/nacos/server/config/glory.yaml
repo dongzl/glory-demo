@@ -17,4 +17,4 @@ provider:
     protocol: grpc
     registry_key: registryKey
     service_id: nacosDemoServer
-    port: 8079
+    port: 8086
