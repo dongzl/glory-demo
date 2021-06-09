@@ -222,8 +222,8 @@ github.com/fsnotify/fsnotify v1.4.9 h1:hsms1Qyu0jgnwNXIxa+/V/PDsU6CfLf6CNO8H7IWo
 github.com/fsnotify/fsnotify v1.4.9/go.mod h1:znqG4EE+3YCdAaPaxE2ZRY/06pZUdp0tY4IgpuI1SZQ=
 github.com/ghodss/yaml v0.0.0-20150909031657-73d445a93680/go.mod h1:4dBDuWmgqj2HViK6kFavaiC9ZROes6MMH2rRYeMEF04=
 github.com/ghodss/yaml v1.0.0/go.mod h1:4dBDuWmgqj2HViK6kFavaiC9ZROes6MMH2rRYeMEF04=
-github.com/glory-go/glory v0.0.0-20210608090500-4164c499f39c h1:Ycp8e3VlejCC9h4fC1IlRmaUJtHcahESeT6R997QuFI=
-github.com/glory-go/glory v0.0.0-20210608090500-4164c499f39c/go.mod h1:hZvhJRMRSfTrAR9CaLhRWT7vUAf5ftKGqk0SxMjFSnY=
+github.com/glory-go/glory v0.0.0-20210609140243-fbde74945816 h1:CwNGoIIdNHHasxNz+MHnEMKpMjEvUQp7OY+ziDZ5Qhk=
+github.com/glory-go/glory v0.0.0-20210609140243-fbde74945816/go.mod h1:hZvhJRMRSfTrAR9CaLhRWT7vUAf5ftKGqk0SxMjFSnY=
 github.com/glycerine/go-unsnap-stream v0.0.0-20181221182339-f9677308dec2 h1:Ujru1hufTHVb++eG6OuNDKMxZnGIvF6o/u8q/8h2+I4=
 github.com/glycerine/go-unsnap-stream v0.0.0-20181221182339-f9677308dec2/go.mod h1:/20jfyN9Y5QPEAprSgKAUr+glWDY39ZiUEAYOEv5dsE=
 github.com/glycerine/goconvey v0.0.0-20190410193231-58a59202ab31 h1:gclg6gY70GLy3PbkQ1AERPfmLMMagS60DKF78eWwLn8=
